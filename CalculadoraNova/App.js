@@ -41,8 +41,8 @@ export default function App() {
     }
     switch(buttonPressed){
       case 'DEL':
-        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 1)))
-        return
+        setCurrentNumber(currentNumber.substring(0, currentNumber.length - 1))
+        return    
       case 'LIMPAR': // Limpa todo o conteúdo
         setLastNumber("") 
         setCurrentNumber("") 
@@ -52,6 +52,7 @@ export default function App() {
         calculator()
         return
       case '+/-':
+        setCurrentNumber(currentNumber * -1)
         return
     }
 
